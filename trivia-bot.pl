@@ -3,22 +3,27 @@ use strict;
 use warnings;
 use REST::Google::Search;
 use List::Util qw[min max];
+use XML::Simple;
+use Data::Dumper; #For debugging XML
 
 REST::Google::Search->http_referer('http://google.com');
 my @questions;
 
-push(@questions,gen_question_node("The Louisiana Purchase involved land bought by the U.S. from:","france",["canada","england","mexico","france"]));
-push(@questions,gen_question_node("At Altamont in 1969, a vicious fight broke out during a performance of:","Sympathy for the Devil",["The Candyman", "Born to be Wild", "Sympathy for the Devil", "All Along the Watchtower"]));
-push(@questions,gen_question_node("Which cat movie is animated?","gay purr-ee",["Three lives of thomasina", "cat people", "gay purr-ee", "The Black Cat"]));
-push(@questions,gen_question_node("What's the main ingredient in a serving of huevos rancheros?","Eggs",["Soup", "Eggs", "Nuts", "Chicken"]));
-push(@questions,gen_question_node("Busby Berkeley gained fame in the 1920's and 1930's as a:","Choreographer",["Pro baseball player","Bank Robber","Choreographer","Band Leader"]));
-push(@questions,gen_question_node("Its largest airport is named for a World War II hero, its second largest for a World War II battle.", "Chicago", ["Chicago", "Toronto", "New York", "Opelika"]));
-push(@questions,gen_question_node("What historical event took place on June 18, 1815?", "Battle of Waterloo", ["Steam Engine Patented", "Antarctica Discovered", "Battle of Waterloo", "Mexicans take the Alamo"]));
-push(@questions,gen_question_node("Which explorer is famous for his three voyages to the pacific?", "James Cook", ["James Cook", "Abel Tasman", "Alexander Mackenzie", "Vitus Bering"]));
-push(@questions,gen_question_node("Istanbul is the only city in the world that is:", "Situated on 2 Continents", ["Only reached by air", "Universally Neutral", "Situated on 2 Continents", "3/4 Underwater"]));
-push(@questions,gen_question_node("Which great man of history was orphaned at an early age?","Confucius",["Confucius","William the Conqueror","Martin Luther King Jr.","Alexander the Great"]));
-push(@questions,gen_question_node("Myasthenia gravis is one of the most common _____ diseases.","Neuromuscular",["Digestive","Neuromuscular","Lung","Airborne"]));
-push(@questions,gen_question_node("This Pepsi drink was introduced in 1948 and competes with Mello Yello.", "Mountain Dew", ["Coke","Pepsi","Mountain Dew","Sierra Mist"]));
+#push(@questions,gen_question_node("The Louisiana Purchase involved land bought by the U.S. from:","france",["canada","england","mexico","france"]));
+#push(@questions,gen_question_node("At Altamont in 1969, a vicious fight broke out during a performance of:","Sympathy for the Devil",["The Candyman", "Born to be Wild", "Sympathy for the Devil", "All Along the Watchtower"]));
+#push(@questions,gen_question_node("Which cat movie is animated?","gay purr-ee",["Three lives of thomasina", "cat people", "gay purr-ee", "The Black Cat"]));
+#push(@questions,gen_question_node("What's the main ingredient in a serving of huevos rancheros?","Eggs",["Soup", "Eggs", "Nuts", "Chicken"]));
+#push(@questions,gen_question_node("Busby Berkeley gained fame in the 1920's and 1930's as a:","Choreographer",["Pro baseball player","Bank Robber","Choreographer","Band Leader"]));
+#push(@questions,gen_question_node("Its largest airport is named for a World War II hero, its second largest for a World War II battle.", "Chicago", ["Chicago", "Toronto", "New York", "Opelika"]));
+#push(@questions,gen_question_node("What historical event took place on June 18, 1815?", "Battle of Waterloo", ["Steam Engine Patented", "Antarctica Discovered", "Battle of Waterloo", "Mexicans take the Alamo"]));
+#push(@questions,gen_question_node("Which explorer is famous for his three voyages to the pacific?", "James Cook", ["James Cook", "Abel Tasman", "Alexander Mackenzie", "Vitus Bering"]));
+#push(@questions,gen_question_node("Istanbul is the only city in the world that is:", "Situated on 2 Continents", ["Only reached by air", "Universally Neutral", "Situated on 2 Continents", "3/4 Underwater"]));
+#push(@questions,gen_question_node("Which great man of history was orphaned at an early age?","Confucius",["Confucius","William the Conqueror","Martin Luther King Jr.","Alexander the Great"]));
+#push(@questions,gen_question_node("Myasthenia gravis is one of the most common _____ diseases.","Neuromuscular",["Digestive","Neuromuscular","Lung","Airborne"]));
+#push(@questions,gen_question_node("This Pepsi drink was introduced in 1948 and competes with Mello Yello.", "Mountain Dew", ["Coke","Pepsi","Mountain Dew","Sierra Mist"]));
+
+import_questions_from_xml("questions/sample_questions.xml");
+
 
 my $num_correct=0;
 my %scores;
@@ -54,9 +59,26 @@ foreach my $question_node_ref (@questions){
 my $number_of_questions = scalar(@questions);
 print "We got $num_correct of $number_of_questions questions correct.\n";
 
+
+sub import_questions_from_xml{
+	my $filename = shift;
+	my $question_xml = XMLin($filename);
+	$question_xml = $question_xml->{'question'};
+	foreach my $question (@$question_xml){
+		my $query = $question->{'query'};
+		my $answer = $question->{'answer'};
+		my $choice_ref = $question->{'choice'};
+		my @choices = @$choice_ref;
+		push(@choices,$answer);
+		@choices = sort(@choices); #Wouldn't want the answer to always be in one place
+		push(@questions,gen_question_node($query, $answer, \@choices));
+	}
+}
+
 sub score_hash_cmp{
 	$scores{$b} <=> $scores{$a};
 }
+
 sub gen_question_node{
 	my $q = shift;
 	my $a = shift;

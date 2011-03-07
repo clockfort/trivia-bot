@@ -1,0 +1,17 @@
+<?xml version='1.0'?>
+<questions>
+	<question>
+		<query>The Lousiana Purchase involved land bought by the U.S. from:</query>
+		<choice>Canada</choice>
+		<choice>England</choice>
+		<choice>Mexico</choice>
+		<answer>France</answer>
+	</question>
+	<question>
+		<query>At Altamont in 1969, a vicious fight broke out during a performance of:</query>
+		<choice>The Candyman</choice>
+		<choice>Born to be Wild</choice>
+		<answer>Sympathy for the Devil</answer>
+		<choice>All Along the Watchtower</choice>
+	</question>
+</questions>

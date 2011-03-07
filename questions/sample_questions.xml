@@ -14,4 +14,60 @@
 		<answer>Sympathy for the Devil</answer>
 		<choice>All Along the Watchtower</choice>
 	</question>
+	<question>
+		<query>Which cat movie is animated?</query>
+		<choice>Three Lives of Thomasina</choice>
+		<choice>Cat People</choice>
+		<choice>The Black Cat</choice>
+		<answer>Gay Purr-ee</answer>
+	</question>
+	<question>
+		<query>What's the main ingredient in a serving of huevos rancheros?</query>
+		<choice>Soup</choice>
+		<answer>Eggs</answer>
+		<choice>Nuts</choice>
+		<choice>Chicken</choice>
+	</question>
+	<question>
+		<query>Busby Berkeley gained fame in the 1920's and 1930's as a:</query>
+		<choice>Pro baseball player</choice>
+		<choice>Bank Robber</choice>
+		<answer>Choreographer</answer>
+		<choice>Band Leader</choice>
+	</question>
+	<question>
+		<query>What historical event took place on June 18, 1815?</query>
+		<choice>Steam Engine Patented</choice>
+		<choice>Antarctica Discovered</choice>
+		<answer>Battle of Waterloo</answer>
+		<choice>Mexicans take the Alamo</choice>
+	</question>
+	<question>
+		<query>Which explorer is famous for his three voyages to the pacific?</query>
+		<answer>James Cook</answer>
+		<choice>Abel Tasman</choice>
+		<choice>Alexander Mackenzie</choice>
+		<choice>Vitus Bering</choice>
+	</question>
+	<question>
+		<query>Which great man of history was orphaned at an early age?</query>
+		<answer>Confucius</answer>
+		<choice>William the Conqueror</choice>
+		<choice>Martin Luther King Jr.</choice>
+		<choice>Alexander the Great</choice>
+	</question>
+	<question>
+		<query>Istanbul is the only city in the world that is:</query>
+		<choice>Only reached by air</choice>
+		<choice>Universally neutral</choice>
+		<answer>Situated on 2 continents</answer>
+		<choice>3/4 underwater</choice>
+	</question>
+	<question>
+		<query>Myasthenia gravis is one of the most common _____ diseases.</query>
+		<choice>Digestive</choice>
+		<answer>Neuromuscular</answer>
+		<choice>Lung</choice>
+		<choice>Airborne</choice>
+	</question>
 </questions>

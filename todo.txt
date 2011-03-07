@@ -1,0 +1,8 @@
+Short term:
+* Add anti-weighting if a possible answer is in the search query. (re: pepsi question)
+* Partial natural language processing to create better queries.
+* Search for "a possible answer" and a+possible+answer, but weight "a possible answer" more.
+
+Long term:
+* Proper natural language processing.
+

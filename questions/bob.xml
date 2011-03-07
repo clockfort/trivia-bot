@@ -1,0 +1,69 @@
+<?xml version='1.0'?>                                                                     
+<questions>                                             
+<question>
+ 	<query>The Federalists were:</query>
+ 	<choice>A New York sports team</choice>
+ 	<choice>A punk rock band</choice>
+ 	<answer>An early American political party</answer>
+ 	<choice>A Russian separatist group</choice>
+</question>
+
+<question>
+ 	<query>The Oregon Trail traditionally started in this 
+Missouri City:</query>
+ 	<answer>Independence</answer>
+ 	<choice>Little Rock</choice>
+ 	<choice>St. Louis</choice>
+ 	<choice>Jefferson City</choice>
+</question>
+
+<question>
+ 	<query>The Spanish American war was started by the sinking 
+of which US Battleship:</query>
+ 	<choice>USS New Jersey</choice>
+ 	<choice>USS New York</choice>
+ 	<choice>USS Idaho</choice>
+ 	<answer>USS Maine</answer>
+</question>
+<question>
+ 	<query>Who is the only president to serve two non-
+consecutive terms?</query>
+ 	<choice>James Polk</choice>
+ 	<choice>William Henry Harrison</choice>
+ 	<choice>Franklin Roosevelt</choice>
+ 	<answer>Grover Cleveland</answer>
+</question>
+<question>
+ 	<query>Tippecanoe and Tyler too was a slogan used by 
+which American presidential candidate:</query>
+ 	<choice>John Tyler</choice>
+ 	<answer>William Henry Harrison</answer>
+ 	<choice>Martin Van Buren</choice>
+ 	<choice>Abraham Lincoln</choice>
+</question>
+
+<question>
+ 	<query>Fifty-four Forty or Fight refers to:</query>
+ 	<choice>A sports slogan</choice>
+ 	<answer>A border dispute</answer>
+ 	<choice>Inflation</choice>
+ 	<choice>A union strike</choice>
+</question>
+
+<question>
+ 	<query>The Civil War was started by an attack on this 
+fort:</query>
+ 	<choice>Fort Knox</choice>
+ 	<choice>Fort Dix</choice>
+ 	<answer>Fort Sumter</answer>
+ 	<choice>Fort Washington</choice>
+</question>
+<question>
+ 	<query>The treaty that ended the Civil War was signed 
+in:</query>
+ 	<choice>A field</choice>
+ 	<choice>A tent</choice>
+ 	<answer>A courthouse</answer>
+ 	<choice>A post office</choice>
+</question>
+</questions>

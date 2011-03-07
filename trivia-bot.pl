@@ -2,6 +2,8 @@
 use strict;
 use warnings;
 use REST::Google::Search;
+use List::Util qw[min max];
+
 REST::Google::Search->http_referer('http://google.com');
 my @questions;
 
@@ -19,6 +21,7 @@ push(@questions,gen_question_node("Myasthenia gravis is one of the most common _
 push(@questions,gen_question_node("This Pepsi drink was introduced in 1948 and competes with Mello Yello.", "Mountain Dew", ["Coke","Pepsi","Mountain Dew","Sierra Mist"]));
 
 my $num_correct=0;
+my %scores;
 foreach my $question_node_ref (@questions){
 	my %question_node = %$question_node_ref;
 
@@ -26,10 +29,20 @@ foreach my $question_node_ref (@questions){
 	my $answer = $question_node{'answer'};
 	my $answer_pool_ref = $question_node{'answer_pool'};
 	my @answer_pool = @$answer_pool_ref;
+	
+	my $scores_ref = find_best($question, \@answer_pool);
 
-	my $final_answer = find_best($question, \@answer_pool);
-	print "Question: $question \nAnswer: $final_answer.\n";
-	if($final_answer eq $answer){
+	print "Question: $question\n";
+	%scores = %$scores_ref;
+	my @keys;
+	foreach my $key (sort score_hash_cmp (keys(%scores))){
+		my $p = $scores{$key};
+		$p = sprintf("%.4f", $p);
+		print "Answer: $key P=$p\n";
+		push (@keys,$key);
+	}
+	my $final_answer = (sort score_hash_cmp (keys(%scores)))[0];
+	if( $final_answer eq $answer){
 		print "CORRECT!\n\n";
 		++$num_correct;
 	}
@@ -41,6 +54,9 @@ foreach my $question_node_ref (@questions){
 my $number_of_questions = scalar(@questions);
 print "We got $num_correct of $number_of_questions questions correct.\n";
 
+sub score_hash_cmp{
+	$scores{$b} <=> $scores{$a};
+}
 sub gen_question_node{
 	my $q = shift;
 	my $a = shift;
@@ -54,6 +70,8 @@ sub gen_question_node{
 	
 	return \%question_node;
 }
+
+
 sub num_results_for_query{
 	my $query = shift;
 
@@ -74,14 +92,49 @@ sub find_best{
 	my $options_ref = shift;
 	my @options = @$options_ref;
 
-	my $base_query = $question;
+	my %results = ();
 
 	my ($best_result,$max_results)=("",0);
 	foreach my $possible_answer (@options){
-		my $num_results = num_results_for_query($base_query.' '."\"".$possible_answer."\"");
-	        if($num_results>$max_results){
-	                ($best_result,$max_results) = ($possible_answer, $num_results);
-        	} 
+		my @query_permutations = permutate($question);
+		foreach my $base_query (@query_permutations){
+			my $num_results = num_results_for_query($base_query.' '."\"".$possible_answer."\"");
+			my $score = $num_results; #TODO make score more complicated
+
+			if(exists($results{$possible_answer})){
+				my $ref = $results{$possible_answer};
+				my @res = @$ref;
+				push(@res, $score);
+				$results{$possible_answer} = \@res;
+			}
+			else{
+				$results{$possible_answer} = [$score];
+				
+			}
+		}
 	}
-	return $best_result;
+	
+	my %scored_results = ();
+	my $sum_score = 0;
+
+	foreach my $possible_answer (keys(%results)){
+		my $scores_ref = $results{$possible_answer};
+		my @scores = @$scores_ref;
+		my $score = eval join '+', @scores; #sum
+		$sum_score += $score;
+		$scored_results{$possible_answer} = $score;
+	}
+	
+	#Normalize
+	my @scores;
+	foreach my $possible_answer (keys(%scored_results)){
+		$scored_results{$possible_answer} /= $sum_score;
+	}
+
+	return \%scored_results;
+}
+
+#TODO add query permutations that will be helpful
+sub permutate{
+my $question = shift;
 }

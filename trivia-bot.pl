@@ -6,11 +6,12 @@ use List::Util qw[min max];
 use XML::Simple;
 use Data::Dumper; #For debugging XML
 use Time::HiRes qw (time);
+#use Lingua::LinkParser; #Natural language processing
 
 REST::Google::Search->http_referer('http://google.com');
 my @questions;
-import_questions_from_xml("questions/sample_questions.xml");
-
+#import_questions_from_xml("questions/sample_questions.xml");
+import_questions_from_xml("questions/bob.xml");
 
 my $num_correct=0;
 my %scores;
@@ -146,7 +147,14 @@ sub find_best{
 	return \%scored_results;
 }
 
-#TODO add query permutations that will be helpful
+#TODO add query permutations that will be helpful, using simple natural language processing
 sub permutate{
-my $question = shift;
+	my $question = shift;
+#	my $parser = new Lingua::LinkParser;
+#	my $parsed_question = $parser->create_sentence($question);
+#	my $question_linkage = $parsed_question->linkage(1);
+
+#	print $parser->get_diagram($question_linkage);
+	return $question;
+
 }

@@ -1,0 +1,10 @@
+Download a copy of link-grammar
+./configure --disable-shared --enable-static
+make
+make install
+
+Install from CPAN:
+Lingua::LinkParser (You may need to manually do a "look Lingua::LinkParser" and build by hand, it is rather finicky about library locations and configuration)
+REST::Google::Search
+XML::Simple
+Data::Dumper

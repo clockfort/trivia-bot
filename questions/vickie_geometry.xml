@@ -1,0 +1,184 @@
+<?xml version='1.0'?>
+ <questions>
+       <question>
+               <query>What is the captial of New York?</query>
+               <answer>Albany</answer>
+               <choice>New York City</choice>
+               <choice>London</choice>
+               <choice>Chicago</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What is the capital of the United States?</query>
+               <choice>New York City</choice>
+               <answer>Washington DC</answer>
+               <choice>Chicago</choice>
+               <choice>Boston</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>How many states are in the United States?</query>
+               <choice>35</choice>
+               <answer>50</answer>
+               <choice>15</choice>
+               <choice>54</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What country is London a city in?</query>
+               <choice>China</choice>
+               <answer>England</answer>
+               <choice>France</choice>
+               <choice>Russia</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What country is Ottawa the capital of?</query>
+               <choice>England</choice>
+               <choice>France</choice>
+               <answer>Canada</answer>
+               <choice>Ireland</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state is on the coast of the Atlantic Ocean?</query>
+               <choice>California</choice>
+               <choice>Illinois</choice>
+               <answer>New Jersey</answer>
+               <choice>Texas</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state is on the coast of the Pacific Ocean?</query>
+               <answer>California</answer>
+               <choice>Illinois</choice>
+               <choice>New Jersey</choice>
+               <choice>Texas</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state is also known as the Sunshine State?</query>
+               <answer>Florida</answer>
+               <choice>California</choice>
+               <choice>Indiana</choice>
+               <choice>Texas</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What is the nickname for New York?</query>
+               <answer>The Empire State</answer>
+               <choice>The Garden State</choice>
+               <choice>The Great Lakes State</choice>
+               <choice>The Evergreen State</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state is also known as the Aloha State?</query>
+               <answer>Hawaii</answer>
+               <choice>Alaska</choice>
+               <choice>Florida</choice>
+               <choice>Kansas</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What country is Paris in?</query>
+               <answer>France</answer>
+               <choice>United States</choice>
+               <choice>China</choice>
+               <choice>India</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What country is Madrid in?</query>
+               <choice>France</choice>
+               <answer>Spain</answer>
+               <choice>Germany</choice>
+               <choice>Canada</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What country is the Nile in?</query>
+               <choice>France</choice>
+               <answer>Egypt</answer>
+               <choice>India</choice>
+               <choice>Japan</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state is Salt Lake in?</query>
+               <choice>New York</choice>
+               <answer>Utah</answer>
+               <choice>California</choice>
+               <choice>Texas</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What is New York's state bird?</query>
+               <choice>Mockingbird</choice>
+               <choice>Hummingbird</choice>
+               <answer>Bluebird</answer>
+               <choice>Cardinal</choice>
+               <category>Geography</category>
+               <category>New York</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state is the Grand Canyon in?</query>
+               <choice>California</choice>
+               <choice>Wyoming</choice>
+               <answer>Arizona</answer>
+               <choice>Texas</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What mountain range is Mount Everest a part of?</query>
+               <answer>Himalayas</answer>
+               <choice>Rockies</choice>
+               <choice>Alps</choice>
+               <choice>Andies</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>How many counties are in New York?</query>
+               <answer>62</answer>
+               <choice>45</choice>
+               <choice>23</choice>
+               <choice>59</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What is the county seat for Monroe County, NY?</query>
+               <answer>Rochester</answer>
+               <choice>Brighton</choice>
+               <choice>Minola</choice>
+               <choice>Batavia</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state has Harrisburg as its capital?</query>
+               <answer>Pennsylvania</answer>
+               <choice>Alaska</choice>
+               <choice>New Jersey</choice>
+               <choice>New Hampshire</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+ </questions>

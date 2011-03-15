@@ -1,0 +1,93 @@
+<?xml version='1.0'?>
+ <questions>
+       <question>
+               <query>Who was the first president?</query>
+               <answer>George Washington</answer>
+               <choice>Abraham Lincoln</choice>
+               <choice>Barack Obama</choice>
+               <choice>Thomas Jefferson</choice>
+               <category>Presidents</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Which president served two terms in office?</query>
+               <choice>James K. Polk</choice>
+               <answer>Andrew Jackson</answer>
+               <choice>Martin Van Buren</choice>
+               <choice>James Garfield</choice>
+               <category>Presidents</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Which president served three terms in office?</query>
+               <choice>George Washington</choice>
+               <answer>Franklin D. Roosevelt</answer>
+               <choice>Thomas Jefferson</choice>
+               <choice>John F. Kennedy</choice>
+               <category>Presidents</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Who was George Washington's vice president?</query>
+               <choice>Abraham Lincoln</choice>
+               <answer>John Adams</answer>
+               <choice>Thomas Jefferson</choice>
+               <choice>Aaron Burr</choice>
+               <category>Presidents</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state was Abraham Lincoln born in?</query>
+               <choice>Texas</choice>
+               <choice>New York</choice>
+               <answer>Kentucky</answer>
+               <choice>Illinois</choice>
+               <category>Presidents</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>What state was Ronald Reagan born in?</query>
+               <choice>California</choice>
+               <choice>Utah</choice>
+               <answer>Illinois</answer>
+               <choice>Texas</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Who was Ronald Reagan's vice president?</query>
+               <answer>George H. W. Bush</answer>
+               <choice>Jimmy Carter</choice>
+               <choice>George W. Bush</choice>
+               <choice>Barack Obama</choice>
+               <category>Presidents</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Who was George H. W. Bush's vice president?</query>
+               <answer>Dan Quayle</answer>
+               <choice>George W. Bush</choice>
+               <choice>Barack Obama</choice>
+               <choice>Al Gore</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Who is Barack Obama's vice president?</query>
+               <answer>Joe Biden</answer>
+               <choice>Sarah Palin</choice>
+               <choice>Dick Cheney</choice>
+               <choice>John McCain</choice>
+               <category>Presidents</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Who did Barack Obama run against for president in 2008?</query>
+               <answer>John McCain</answer>
+               <choice>George W. Bush</choice>
+               <choice>Al Gore</choice>
+               <choice>Dan Quayle</choice>
+               <category>Geography</category>
+               <difficulty>Easy</difficulty>
+       </question>
+ </questions>

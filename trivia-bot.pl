@@ -10,8 +10,11 @@ use Time::HiRes qw (time);
 
 REST::Google::Search->http_referer('http://google.com');
 my @questions;
-#import_questions_from_xml("questions/sample_questions.xml");
-import_questions_from_xml("questions/bob.xml");
+import_questions_from_xml("questions/sample_questions.xml");
+#import_questions_from_xml("questions/bob.xml");
+#import_questions_from_xml("questions/vickie_geometry.xml");
+#import_questions_from_xml("questions/vickie_science.xml");
+#import_questions_from_xml("questions/vickie_presidents.xml");
 
 my $num_correct=0;
 my %scores;
@@ -153,8 +156,18 @@ sub permutate{
 #	my $parser = new Lingua::LinkParser;
 #	my $parsed_question = $parser->create_sentence($question);
 #	my $question_linkage = $parsed_question->linkage(1);
-
+	
 #	print $parser->get_diagram($question_linkage);
+	
+#	print "________START QUERY DEBUG_________\n";
+#	my $main_subject_et_al =  'S[s|p]' .          # singular and plural subject
+#		                '(?:[\w\*]{1,3})*' . # any optional subscripts
+#       	        		':(\d+):' .        # number of the word
+#		                '(\w+(?:\.\w)*)';
+#	my @matches = ($question_linkage =~ /$main_subject_et_al/mx);
+
+#	print @matches;
+	 
 	return $question;
 
 }

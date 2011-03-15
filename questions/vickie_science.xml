@@ -1,0 +1,48 @@
+<?xml version='1.0'?>
+ <questions>
+       <question>
+               <query>Which of these is not a planet?</query>
+               <answer>Moon</answer>
+               <choice>Earth</choice>
+               <choice>Mars</choice>
+               <choice>Jupiter</choice>
+               <category>Science</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Which of these is not an example of precipitation?</query>
+               <choice>Rain</choice>
+               <answer>Wind</answer>
+               <choice>Snow</choice>
+               <choice>Sleet</choice>
+               <category>Science</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Which of these is not a type of cloud?</query>
+               <choice>Cirrus</choice>
+               <answer>Zephus</answer>
+               <choice>Cumulus</choice>
+               <choice>Stratus</choice>
+               <category>Science</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Which of these causes the green color in plants?</query>
+               <choice>Sodium</choice>
+               <answer>Chlorophyll</answer>
+               <choice>Chlorine</choice>
+               <choice>Zinc</choice>
+               <category>Science</category>
+               <difficulty>Easy</difficulty>
+       </question>
+       <question>
+               <query>Which of these is another name for table salt?</query>
+               <choice>Potassium Sulfate</choice>
+               <choice>Ethylene Glycol</choice>
+               <answer>Sodium Chloride</answer>
+               <choice>Sulfur</choice>
+               <category>Science</category>
+               <difficulty>Easy</difficulty>
+       </question>
+ </questions>

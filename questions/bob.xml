@@ -1,5 +1,6 @@
-<?xml version='1.0'?>                                                                     
-<questions>                                             
+<?xml version='1.0'?>
+<questions>
+
 <question>
  	<query>The Federalists were:</query>
  	<choice>A New York sports team</choice>
@@ -18,22 +19,6 @@ Missouri City:</query>
 </question>
 
 <question>
- 	<query>The Spanish American war was started by the sinking 
-of which US Battleship:</query>
- 	<choice>USS New Jersey</choice>
- 	<choice>USS New York</choice>
- 	<choice>USS Idaho</choice>
- 	<answer>USS Maine</answer>
-</question>
-<question>
- 	<query>Who is the only president to serve two non-
-consecutive terms?</query>
- 	<choice>James Polk</choice>
- 	<choice>William Henry Harrison</choice>
- 	<choice>Franklin Roosevelt</choice>
- 	<answer>Grover Cleveland</answer>
-</question>
-<question>
  	<query>Tippecanoe and Tyler too was a slogan used by 
 which American presidential candidate:</query>
  	<choice>John Tyler</choice>
@@ -49,6 +34,24 @@ which American presidential candidate:</query>
  	<choice>Inflation</choice>
  	<choice>A union strike</choice>
 </question>
+<question>
+ 	<query>The Spanish American war was started by the sinking 
+of which US Battleship:</query>
+ 	<choice>USS New Jersey</choice>
+ 	<choice>USS New York</choice>
+ 	<choice>USS Idaho</choice>
+ 	<answer>USS Maine</answer>
+</question>
+<question>
+ 	<query>Who is the only president to serve two non-
+consecutive terms?</query>
+ 	<choice>James Polk</choice>
+ 	<choice>William Henry Harrison</choice>
+ 	<choice>Franklin Roosevelt</choice>
+ 	<answer>Grover Cleveland</answer>
+</question>
+
+
 
 <question>
  	<query>The Civil War was started by an attack on this 
@@ -66,4 +69,102 @@ in:</query>
  	<answer>A courthouse</answer>
  	<choice>A post office</choice>
 </question>
+
+<question>
+ 	<query>World War I saw the widespread use of what new military technology?</query>
+ 	<answer>Tanks</answer>
+ 	<choice>Muskets</choice>
+ 	<choice>Helicopters</choice>
+ 	<choice>Balloons</choice>
+</question>
+
+<question>
+ 	<query>Which Russian political party led the October Revolution?</query>
+ 	<answer>The Bolsheviks</answer>
+ 	<choice>The Maoists</choice>
+ 	<choice>The Marxists</choice>
+ 	<choice>The Stalinists</choice>
+</question>
+
+<question>
+ 	<query>This American victory in the War of 1812 occurred after the treaty of Ghent was signed:</query>
+ 	<choice>The Battle of Bunker Hill</choice>
+ 	<choice>The Battle of Washington</choice>
+ 	<choice>The Battle of the Chesapeake</choice>
+ 	<answer>The Battle of New Orleans</answer>
+</question>
+
+<question>
+ 	<query>The capture of this city ended the Vietnam War:</query>
+ 	<answer>Saigon</answer>
+ 	<choice>Ho Chi Minh City</choice>
+ 	<choice>My Lai</choice>
+ 	<choice>Phuoc Long</choice>
+</question>
+
+<question>
+ 	<query>Which city was the Declaration of Independence signed it?</query>
+ 	<choice>Baltimore</choice>
+ 	<answer>Philadelphia</answer>
+ 	<choice>Boston</choice>
+ 	<choice>New York City</choice>
+</question>
+
+
+<question>
+ 	<query>The battle of Hastings occurred in which year?</query>
+ 	<choice>1056</choice>
+ 	<choice>1105</choice>
+ 	<answer>1066</answer>
+ 	<choice>1070</choice>
+</question>
+
+<question>
+ 	<query>This English document is considered the precursor to the Bill of Rights</query>
+ 	<choice>The Domesday Book</choice>
+ 	<choice>The Constitution</choice>
+ 	<choice>The Treaty of Ghent</choice>
+ 	<answer>The Magna Carta</answer>
+</question>
+
+<question>
+ 	<query>The shooting of prince of this country started World War I</query>
+ 	<answer>Serbia</answer>
+ 	<choice>Germany</choice>
+ 	<choice>Austria</choice>
+ 	<choice>Yugoslavia</choice>
+</question>
+
+<question>
+ 	<query>This ancient civilization built the Pyramids</query>
+ 	<choice>The Mesopotamians</choice>
+ 	<choice>The Harrapans</choice>
+ 	<choice>The Phoenicians</choice>
+ 	<answer>The Egyptians</answer>
+</question>
+
+<question>
+ 	<query>The Mesopotamians were known for building these megalithic structures</query>
+ 	<answer>Ziggarauts</answer>
+ 	<choice>Pyramids</choice>
+ 	<choice>Aqueducts</choice>
+ 	<choice>Lighthouses</choice>
+</question>
+
+<question>
+ 	<query>The Gauls were mainly located in this modern day country:</query>
+ 	<choice>Britian</choice>
+ 	<choice>Spain</choice>
+ 	<answer>France</answer>
+ 	<choice>Germany</choice>
+</question>
+
+<question>
+ 	<query>The battle in this Russian city is regarded as a turning point in World War II</query>
+ 	<choice>Leningrad</choice>
+ 	<answer>Stalingrad</answer>
+ 	<choice>Petrograd</choice>
+ 	<choice>Normandy</choice>
+</question>
+
 </questions>

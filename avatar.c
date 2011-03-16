@@ -35,6 +35,7 @@ int main(int argc, char *argv[])
     SDL_Surface *surface;
     SDL_Event event;
     GLUquadric *quadric;
+    int mySpeed = 3;
 
     // initialize SDL
 
@@ -49,7 +50,7 @@ int main(int argc, char *argv[])
 
     SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
     SDL_GL_SetAttribute(SDL_GL_DEPTH_SIZE, 24);
-    SDL_WM_SetCaption("BONER TOWN", 0);
+    SDL_WM_SetCaption("Avatar GUI Test", 0);
 
     ticks_prev = SDL_GetTicks();
 
@@ -102,7 +103,13 @@ int main(int argc, char *argv[])
 			myGreen = 0.0f;
 			ballColor[0] = myRed;
 			ballColor[1] = myGreen;
-			}
+		}
+		if (SDLK_F3 == event.key.keysym.sym){
+			mySpeed--;
+		}
+		if (SDLK_F4 == event.key.keysym.sym){
+			mySpeed++;
+		}
                 break;
             case SDL_QUIT:
                 running = 0;
@@ -117,7 +124,7 @@ int main(int argc, char *argv[])
         ticks_prev = ticks_curr;
 
         //cam_th += delta * 0.1f;
-        sat_th += 4 * delta * (180.0f / M_PI);
+        sat_th += mySpeed * delta * (180.0f / M_PI);
         planet_th += delta * (180.0f / M_PI);
 
         cam_x =  0.1f * cos(cam_th);

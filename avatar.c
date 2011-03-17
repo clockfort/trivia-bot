@@ -21,7 +21,7 @@ void set_vsync(int enable)
 
 int main(int argc, char *argv[])
 {
-    const int screen_x = 1600, screen_y = 1200;
+    const int screen_x = 1260, screen_y = 1000;
     int running = 1, ticks_prev, ticks_curr;
     float delta, cam_th = 0.0f, cam_x, cam_z, planet_th = 0.0f, sat_th = 0.0f;
     float lt1_diffuse[] = { 1.0f, 0.0f, 0.0f, 1.0f };
@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
     SDL_Surface *surface;
     SDL_Event event;
     GLUquadric *quadric;
-    int mySpeed = 3;
+    float mySpeed = 3;
 
     // initialize SDL
 
@@ -84,6 +84,13 @@ int main(int argc, char *argv[])
     gluQuadricTexture(quadric, GL_FALSE);
 
     // render loop
+    enum state { idle, thinking };
+    enum state next_state = idle;
+    enum state current_state = idle;
+    myRed = 0.0f;
+    myGreen = 1.0f;
+    ballColor[0] = myRed;
+    ballColor[1] = myGreen;
 
     while (running) {
 
@@ -93,16 +100,18 @@ int main(int argc, char *argv[])
                 if (SDLK_ESCAPE == event.key.keysym.sym)
                     running = 0;
 		if (SDLK_F1 == event.key.keysym.sym){
-			myRed = 0.0f;
-			myGreen = 1.0f;
-			ballColor[0] = myRed;
-			ballColor[1] = myGreen;
+			next_state=idle;
+	//		myRed = 0.0f;
+	//		myGreen = 1.0f;
+	//		ballColor[0] = myRed;
+	//		ballColor[1] = myGreen;
 		}
 		if (SDLK_F2 == event.key.keysym.sym){
-			myRed = 1.0f;
-			myGreen = 0.0f;
-			ballColor[0] = myRed;
-			ballColor[1] = myGreen;
+			next_state= thinking;
+	//		myRed = 1.0f;
+	//		myGreen = 0.0f;
+	//		ballColor[0] = myRed;
+	//		ballColor[1] = myGreen;
 		}
 		if (SDLK_F3 == event.key.keysym.sym){
 			mySpeed--;
@@ -116,12 +125,34 @@ int main(int argc, char *argv[])
                 break;
             }
         }
-
-        // calculate the time delta between this frame and the previous
+	// calculate the time delta between this frame and the previous
 
         ticks_curr = SDL_GetTicks();
         delta = (ticks_curr - ticks_prev) / 1000.0f;
         ticks_prev = ticks_curr;
+
+        if(next_state != current_state){
+		if(current_state == idle){
+	                myRed += 1.0f*delta;
+			//printf("myRed = %f , delta= %f, mySpeed= %f\n", myRed, delta, mySpeed);
+			myGreen -= 1.0f*delta;
+			if(myGreen <= 0.0f){
+				current_state = next_state;
+			}
+			mySpeed += 1.5f*delta;
+		}
+		if(current_state == thinking){
+			myRed -= 1.0f*delta;
+			myGreen += 1.0f*delta;
+			if(myRed <= 0.0f){
+				current_state = next_state;
+			}
+			mySpeed -= 1.5f*delta;
+		}
+		//Update colors accordingly
+	 	ballColor[0] = myRed;
+		ballColor[1] = myGreen;
+        }
 
         //cam_th += delta * 0.1f;
         sat_th += mySpeed * delta * (180.0f / M_PI);

@@ -8,7 +8,7 @@ use Trivia::Questions::Import;
 
 my @questions=Trivia::Questions::Import::get_questions();
 
-#my $parser = new Lingua::LinkParser;
+my $num_correct=0;
 Trivia::Engine::Google::Simple::input(@questions);
 Trivia::Engine::Google::Simple::solve();
 

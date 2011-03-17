@@ -101,17 +101,9 @@ int main(int argc, char *argv[])
                     running = 0;
 		if (SDLK_F1 == event.key.keysym.sym){
 			next_state=idle;
-	//		myRed = 0.0f;
-	//		myGreen = 1.0f;
-	//		ballColor[0] = myRed;
-	//		ballColor[1] = myGreen;
 		}
 		if (SDLK_F2 == event.key.keysym.sym){
 			next_state= thinking;
-	//		myRed = 1.0f;
-	//		myGreen = 0.0f;
-	//		ballColor[0] = myRed;
-	//		ballColor[1] = myGreen;
 		}
 		if (SDLK_F3 == event.key.keysym.sym){
 			mySpeed--;
@@ -125,12 +117,13 @@ int main(int argc, char *argv[])
                 break;
             }
         }
-	// calculate the time delta between this frame and the previous
 
+	// calculate the time delta between this frame and the previous
         ticks_curr = SDL_GetTicks();
         delta = (ticks_curr - ticks_prev) / 1000.0f;
         ticks_prev = ticks_curr;
 
+	//Transition from one state to another
         if(next_state != current_state){
 		if(current_state == idle){
 	                myRed += 1.0f*delta;
